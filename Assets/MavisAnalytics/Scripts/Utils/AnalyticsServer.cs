@@ -12,12 +12,12 @@ namespace MavisAnalytics
 {
     public static class AnalyticsServer
     {
-        public static void PostAPI(string url, Dictionary<string,string> data, UnityAction<Error, string> cb)
+        public static void PostAPI(string url, MavisAnalyticsRequest data, UnityAction<Error, string> cb)
         {
             Request(url, HttpMethod.Post, data, cb);
         }
 
-        private static void Request(string url, HttpMethod method, Dictionary<string, string> data, UnityAction<Error, string> callback)
+        private static void Request(string url, HttpMethod method, MavisAnalyticsRequest data, UnityAction<Error, string> callback)
         {
             var request = new UnityWebRequest(url, "POST");
 

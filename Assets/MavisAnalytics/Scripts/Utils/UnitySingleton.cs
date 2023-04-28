@@ -37,6 +37,7 @@ namespace MavisAnalytics
                 Destroy(gameObject);
             }
         }
+        protected virtual void InitManager() { }
     }
 }
 
