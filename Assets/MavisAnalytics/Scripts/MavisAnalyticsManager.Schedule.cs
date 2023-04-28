@@ -32,6 +32,7 @@ namespace MavisAnalytics
 
         private void CheckAndSendRequest()
         {
+            Debug.Log("Sending Event");
             if (analyticsDataList == null || analyticsDataList.eventsDataList.Count == 0)
                 return;
             SendAnalyticsRequest();

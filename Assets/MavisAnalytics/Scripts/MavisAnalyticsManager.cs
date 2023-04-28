@@ -9,8 +9,8 @@ namespace MavisAnalytics
 {
     public partial class MavisAnalyticsManager : UnitySingleton<MavisAnalyticsManager>
     {
-        public string PostUrl => "";
-        public string ApiKey => "";
+        public string PostUrl => MavisAnalytics.GetTrackinUrl();
+        public string ApiKey => MavisAnalytics.GetApiKey();
         public string userId;
 
         public string BuildVersion => $"{Application.version}-{GlobalInfo.BuildNumber}";
@@ -40,7 +40,7 @@ namespace MavisAnalytics
             SessionId = Guid.NewGuid().ToString();
             recentRequestTime = float.MinValue;
             IsInitialised = true;
-            Debug.Log("MavisAnalytics Session Start");
+            Debug.Log("MavisAnalytics Session Start " + Instance.PostUrl + Instance.ApiKey);
         }
 
         public void AddEvent(EventTypes type, object data)

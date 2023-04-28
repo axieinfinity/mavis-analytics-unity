@@ -22,7 +22,7 @@ namespace MavisAnalytics
             var request = new UnityWebRequest(url, "POST");
 
             request.SetRequestHeader("Content-Type", "application/json");
-            request.SetRequestHeader("Authorization", "Basic " + $"vpgj85hUJzwwC7Z5ux4HcAENa5Yzgihm:".ToBase64());
+            request.SetRequestHeader("Authorization", "Basic " + $"{MavisAnalytics.GetApiKey()}:".ToBase64());
             request.method = method.ToString().ToUpper();
             request.downloadHandler = new DownloadHandlerBuffer();
             var json = JsonConvert.SerializeObject(data, serializerSettings);
