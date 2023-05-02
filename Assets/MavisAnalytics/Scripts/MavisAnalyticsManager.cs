@@ -15,10 +15,10 @@ namespace MavisAnalytics
 
         public string BuildVersion => $"{Application.version}-{GlobalInfo.BuildNumber}";
 
-        public int RequestInterval => 5; //TODO : get from settings or Constants
-        public int RetryAttempts => 5;  // TODO : get from settings or Constants
+        public int RequestInterval => 10; //TODO : get from settings or Constants
+        public int RetryAttempts => 3;  // TODO : get from settings or Constants
 
-        public int EventPerRequest => 20; // TODO : get from settings or Constants
+        public int EventPerRequest => 200;// TODO : get from settings or Constants
 
         public string SessionId { get; private set; }
         public bool IsInitialised { get; private set; }
@@ -40,7 +40,6 @@ namespace MavisAnalytics
             SessionId = Guid.NewGuid().ToString();
             recentRequestTime = float.MinValue;
             IsInitialised = true;
-            Debug.Log("MavisAnalytics Session Start " + Instance.PostUrl + Instance.ApiKey);
         }
 
         public void AddEvent(EventTypes type, object data)

@@ -10,6 +10,15 @@ namespace MavisAnalytics
         {
             MavisAnalytics.InitAnalytics();
         }
+        private void Start()
+        {
+            MavisAnalytics.SetUserId("random_user_test_id");
+        }
+
+        public void TrackEv(string eventName)
+        {
+            MavisAnalytics.TrackEvent(eventName);
+        }
     }
 }
 

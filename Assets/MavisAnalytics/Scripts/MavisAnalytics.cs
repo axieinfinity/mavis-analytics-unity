@@ -9,12 +9,17 @@ namespace MavisAnalytics
         static MavisAnalyticsSettings _settings = Resources.Load<MavisAnalyticsSettings>("MavisAnalyticsSettings");
         private static string _apiKey = _settings.APIKey;
         private static string _trackingUrl = _settings.APIUrl;
-
+        static MavisAnalyticsManager _analytics;
         public static void SyncSettings(string apiKey, string trackingUrl)
         {
             _trackingUrl = trackingUrl;
             _apiKey = apiKey;
             Debug.Log("Mavis Analytics settings synced. API key: " + _apiKey);
+        }
+
+        public static void TrackEvent(string eventName)
+        {
+            _analytics.AddEvent(EventTypes.track, eventName, "test");
         }
 
         public static string GetApiKey()
@@ -27,10 +32,13 @@ namespace MavisAnalytics
         }
         public static void InitAnalytics()
         {
-
-            Debug.Log(_apiKey + _trackingUrl);
+            _analytics = MavisAnalyticsManager.Instance;
             // Initialise Session
-            MavisAnalyticsManager.Instance.StartSession();
+            _analytics.StartSession();
+        }
+        public static void SetUserId(string userId)
+        {
+            _analytics.userId = userId;
         }
 
 

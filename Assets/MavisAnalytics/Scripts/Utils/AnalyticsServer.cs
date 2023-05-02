@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
 using HttpMethod = System.Net.Http.HttpMethod;
@@ -40,9 +41,11 @@ namespace MavisAnalytics
             if (wr.responseCode != 200 || !string.IsNullOrEmpty(wr.error))
             {
                 onComplete(Error.New(wr.responseCode, wr.error), null);
+                Debug.Log("Event Failed to  send");
             } else
             {
                 onComplete(null, wr.downloadHandler?.text);
+                Debug.Log("Event Successfully sent" + wr.downloadHandler?.text);
             }
         }
 

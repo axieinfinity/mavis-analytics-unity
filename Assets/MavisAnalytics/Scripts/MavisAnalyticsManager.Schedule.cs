@@ -32,9 +32,13 @@ namespace MavisAnalytics
 
         private void CheckAndSendRequest()
         {
-            Debug.Log("Sending Event");
+            Debug.Log(analyticsDataList.eventsDataList.Count);
             if (analyticsDataList == null || analyticsDataList.eventsDataList.Count == 0)
                 return;
+            for (int i = 0; i < analyticsDataList.eventsDataList.Count; i++)
+            {
+                Debug.Log("AnalyticsEvent #" + i + " Type: " + analyticsDataList.eventsDataList[i].type + " Data: " + analyticsDataList.eventsDataList[i].data);
+            }
             SendAnalyticsRequest();
         }
 
