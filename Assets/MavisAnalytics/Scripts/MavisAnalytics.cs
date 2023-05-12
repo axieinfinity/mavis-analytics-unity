@@ -17,9 +17,17 @@ namespace MavisAnalytics
             Debug.Log("Mavis Analytics settings synced. API key: " + _apiKey);
         }
 
-        public static void TrackEvent(string eventName)
+        public static void TrackEvent(string eventName, string refEventName)
         {
-            _analytics.AddEvent(EventTypes.track, eventName, "test");
+            _analytics.AddEvent(EventTypes.track, eventName, refEventName);
+        }
+        public static void TrackEvent(string eventName, string refEventName, object metadata)
+        {
+            var data = new
+            {
+                action = eventName, action_properties = metadata
+            };
+            _analytics.AddEvent(EventTypes.track, data ,eventName,refEventName);
         }
 
         public static string GetApiKey()
