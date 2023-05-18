@@ -5,7 +5,7 @@ using System;
 using UnityEngine;
 using System.Text.RegularExpressions;
 
-namespace MavisAnalytics
+namespace MavisAnalyticsSDK
 {
     public static class StringExtension
     {

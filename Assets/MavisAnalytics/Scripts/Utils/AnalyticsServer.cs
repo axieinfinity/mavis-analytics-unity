@@ -9,7 +9,7 @@ using UnityEngine.Networking;
 using HttpMethod = System.Net.Http.HttpMethod;
 
 
-namespace MavisAnalytics
+namespace MavisAnalyticsSDK
 {
     public static class AnalyticsServer
     {

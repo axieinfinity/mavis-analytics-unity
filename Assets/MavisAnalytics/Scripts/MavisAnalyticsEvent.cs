@@ -2,7 +2,7 @@ using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace MavisAnalytics
+namespace MavisAnalyticsSDK
 {
     public enum EventTypes {
         unknown,

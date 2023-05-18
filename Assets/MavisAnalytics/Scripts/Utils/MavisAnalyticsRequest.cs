@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace MavisAnalytics
+namespace MavisAnalyticsSDK
 {
     [Serializable]
     public class MavisAnalyticsRequest

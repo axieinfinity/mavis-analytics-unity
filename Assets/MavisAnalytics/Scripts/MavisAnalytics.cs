@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MavisAnalytics
+namespace MavisAnalyticsSDK
 {
     public static class MavisAnalytics
     {
@@ -14,7 +14,6 @@ namespace MavisAnalytics
         {
             _trackingUrl = trackingUrl;
             _apiKey = apiKey;
-            Debug.Log("Mavis Analytics settings synced. API key: " + _apiKey);
         }
 
         public static void TrackEvent(string eventName, string refEventName)
@@ -47,6 +46,7 @@ namespace MavisAnalytics
         public static void SetUserId(string userId)
         {
             _analytics.userId = userId;
+            _analytics.AddEvent(EventTypes.identify, "identify","identify");
         }
 
 

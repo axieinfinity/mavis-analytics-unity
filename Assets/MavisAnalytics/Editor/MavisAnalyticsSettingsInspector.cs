@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace MavisAnalytics
+namespace MavisAnalyticsSDK
 {
     [CustomEditor(typeof(MavisAnalyticsSettings))]
     public class MavisAnalyticsSettingsInspector : Editor

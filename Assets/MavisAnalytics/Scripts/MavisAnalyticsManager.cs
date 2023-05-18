@@ -5,7 +5,7 @@ using Newtonsoft.Json.Linq;
 using UnityEngine;
 
 
-namespace MavisAnalytics
+namespace MavisAnalyticsSDK
 {
     public partial class MavisAnalyticsManager : UnitySingleton<MavisAnalyticsManager>
     {

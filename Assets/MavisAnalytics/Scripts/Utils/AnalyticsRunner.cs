@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 using Object = UnityEngine.Object;
 
 
-namespace MavisAnalytics
+namespace MavisAnalyticsSDK
 {
     public static class AnalyticsRunner
     {

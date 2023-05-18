@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace MavisAnalytics
+namespace MavisAnalyticsSDK
 {
     public class UnitySingleton<T> : MonoBehaviour where T : Component
     {

@@ -5,7 +5,7 @@ using System.IO;
 using UnityEngine;
 
 
-namespace MavisAnalytics
+namespace MavisAnalyticsSDK
 {
     [Serializable]
     public class AnalyticsDataList
