@@ -32,7 +32,6 @@ namespace MavisAnalyticsSDK
 
         private void CheckAndSendRequest()
         {
-            Debug.Log(analyticsDataList.eventsDataList.Count);
             if (analyticsDataList == null || analyticsDataList.eventsDataList.Count == 0)
                 return;
             for (int i = 0; i < analyticsDataList.eventsDataList.Count; i++)

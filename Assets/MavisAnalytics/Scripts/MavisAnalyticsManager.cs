@@ -70,7 +70,6 @@ namespace MavisAnalyticsSDK
                 return;
             analyticsEvent.MergeData(GetCommonFields());
             analyticsDataList.eventsDataList.Add(analyticsEvent);
-            Debug.Log(analyticsEvent);
             analyticsDataList.SaveToDevice();
         }
 
