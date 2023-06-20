@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using MavisAnalyticsSDK;
-using UnityEngine.SceneManagement;
+
 public class MavisAnalyticsBehaviour : MonoBehaviour
 {
     private void Awake()

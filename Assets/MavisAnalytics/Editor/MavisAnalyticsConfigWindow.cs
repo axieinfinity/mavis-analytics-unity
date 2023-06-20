@@ -44,6 +44,8 @@ namespace MavisAnalyticsSDK
             EditorGUILayout.LabelField("Mavis Analytics Settings", EditorStyles.boldLabel);
             EditorGUILayout.Space();
 
+            EditorGUI.BeginChangeCheck();
+
             _settings.APIKey = EditorGUILayout.TextField("API Key", _settings.APIKey);
 
             EditorGUI.BeginDisabledGroup(true);
@@ -61,7 +63,7 @@ namespace MavisAnalyticsSDK
                 else
                 {
                     _showError = false;
-                    MavisAnalytics.SyncSettings(_settings.APIKey,_settings.APIUrl);
+                    MavisAnalytics.SyncSettings(_settings.APIKey, _settings.APIUrl);
                 }
             }
 
@@ -69,6 +71,13 @@ namespace MavisAnalyticsSDK
             {
                 EditorGUILayout.HelpBox("Please type in an API key to sync.", MessageType.Error);
             }
+
+            if (EditorGUI.EndChangeCheck())
+            {
+                EditorUtility.SetDirty(_settings);
+                AssetDatabase.SaveAssets();
+            }
         }
+
     }
 }

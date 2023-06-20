@@ -1,27 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
-namespace MavisAnalyticsSDK
+public static class GlobalInfo
 {
-    public static class GlobalInfo
-    {
-        public static bool NetworkAvailable = true;
-        static GlobalInfo() { }
+    public static bool NetworkAvailable = true;
 
-        public static int BuildNumber
+    public static int BuildNumber
+    {
+        get
         {
-            get
+            string path = Application.streamingAssetsPath + "/BuildNumber.txt";
+
+            try
             {
-#if UNITY_EDITOR
-#if UNITY_ANDROID
-                return UnityEditor.PlayerSettings.Android.bundleVersionCode;
-#elif UNITY_IOS
-                return int.Parse(UnityEditor.PlayerSettings.iOS.buildNumber);
-#else
-                return int.Parse(UnityEditor.PlayerSettings.macOS.buildNumber);
-#endif
-#endif
+                if (File.Exists(path))
+                {
+                    string buildNumberText = File.ReadAllText(path);
+                    return int.Parse(buildNumberText);
+                }
+                else
+                {
+                    Debug.LogError("Build number file not found");
+                    return 0;
+                }
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError("Failed to read build number: " + e.Message);
+                return 0;
             }
         }
     }

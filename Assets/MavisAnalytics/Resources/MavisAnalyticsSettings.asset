@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb529f7dc9eb4f63a0bedb28244e45e, type: 3}
   m_Name: MavisAnalyticsSettings
   m_EditorClassIdentifier: 
-  _apiKey: 
+  _apiKey: vpgj85hUJzwwC7Z5ux4HcAENa5Yzgihm
   _apiUrl: https://x.skymavis.com/track

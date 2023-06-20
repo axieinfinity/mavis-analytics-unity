@@ -207,7 +207,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1554527848}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MavisAnalytics.MavisAnalyticsBehaviour, Assembly-CSharp
         m_MethodName: StartGame
         m_Mode: 5
@@ -937,7 +937,7 @@ RectTransform:
   - {fileID: 31960554}
   - {fileID: 1520738287}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1028,7 +1028,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1554527848}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MavisAnalytics.MavisAnalyticsBehaviour, Assembly-CSharp
         m_MethodName: TrackEv
         m_Mode: 5
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1554527848}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MavisAnalytics.MavisAnalyticsBehaviour, Assembly-CSharp
         m_MethodName: GameEnded
         m_Mode: 5
@@ -1212,17 +1212,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520738286}
   m_CullTransparentMesh: 1
---- !u!114 &1554527848 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8037307157971038668, guid: 1bbb62d96a6454f3f8f6633d4b4907e9, type: 3}
-  m_PrefabInstance: {fileID: 8037307156690192292}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f27d193992754630a3f8f6fa0fa9fe2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1720189502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,7 +1413,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2084105331
 GameObject:
@@ -1510,7 +1499,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1554527848}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MavisAnalytics.MavisAnalyticsBehaviour, Assembly-CSharp
         m_MethodName: TrackEv
         m_Mode: 5
@@ -1560,7 +1549,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084105331}
   m_CullTransparentMesh: 1
---- !u!1001 &8037307156690192292
+--- !u!1001 &2101344188
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1573,7 +1562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8037307157971038659, guid: 1bbb62d96a6454f3f8f6633d4b4907e9, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8037307157971038659, guid: 1bbb62d96a6454f3f8f6633d4b4907e9, type: 3}
       propertyPath: m_LocalPosition.x
