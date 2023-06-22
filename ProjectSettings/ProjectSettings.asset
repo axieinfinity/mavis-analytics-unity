@@ -159,7 +159,7 @@ PlayerSettings:
     iPhone: com.DefaultCompany.MavisAnalytics
   buildNumber:
     Standalone: 3
-    iPhone: 0
+    iPhone: 3
     tvOS: 0
   overrideDefaultApplicationIdentifier: 0
   AndroidBundleVersionCode: 1

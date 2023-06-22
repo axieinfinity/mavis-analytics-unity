@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
 using UnityEngine;
+
 class BuildNumberPreprocess : IPreprocessBuildWithReport
 {
     public int callbackOrder { get { return 0; } }
@@ -17,8 +18,15 @@ class BuildNumberPreprocess : IPreprocessBuildWithReport
 #else
         buildNumber = int.Parse(PlayerSettings.macOS.buildNumber);
 #endif
-        string path = Application.streamingAssetsPath + "/BuildNumber.txt";
-        File.WriteAllText(path, buildNumber.ToString());
+        string directoryPath = Application.streamingAssetsPath;
+        string filePath = directoryPath + "/BuildNumber.txt";
+
+        if (!Directory.Exists(directoryPath))
+        {
+            Directory.CreateDirectory(directoryPath);
+        }
+
+        File.WriteAllText(filePath, buildNumber.ToString());
         AssetDatabase.Refresh();
     }
 }

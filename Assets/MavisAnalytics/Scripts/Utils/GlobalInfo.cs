@@ -9,6 +9,10 @@ public static class GlobalInfo
     {
         get
         {
+#if UNITY_EDITOR
+            return 0;
+
+#else
             string path = Application.streamingAssetsPath + "/BuildNumber.txt";
 
             try
@@ -29,6 +33,7 @@ public static class GlobalInfo
                 Debug.LogError("Failed to read build number: " + e.Message);
                 return 0;
             }
+#endif
         }
     }
 }
